@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="headerContent">
+                <div class="leftSideHeader">
+                    <div><img src="img/rafscore-logo.svg" alt=""></div>
+                </div>
+                <div class="rightSideHeader">
+                    <div><a href="contact.html" class="contactUsBtn">Contact us</a></div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="container contatcWrapper">
+            <p class="jmCrumb">
+                Home <span class="jmCrArro1"></span> <span class="jmCrArro2"></span> Contact Us
+            </p>
+            <h1 class="jmContacth1">Contact Us</h1>
+            <p class="getinT-Jm">Get in touch with us</p>
+            <form action="#" autocomplete="off">
+                <div class="contantFormBox">
+                    <div class="formLeft">
+                        <div class="jm-customInputV2">
+                            <span class="jmCustomLabelV2">First Name</span>
+
+                            <input type="text" name="email" class="jmEmailInput">
+                        </div>
+                        <div class="jm-customInputV2">
+                            <span class="jmCustomLabelV2">Last Name</span>
+
+                            <input type="text" name="email" class="jmEmailInput">
+                        </div>
+
+                        <div class="jm-customInputV2">
+                            <span class="jmCustomLabelV2">Company Name</span>
+
+                            <input type="text" name="email" class="jmEmailInput">
+                        </div>
+                        <div class="jm-customInputV2">
+                            <span class="jmCustomLabelV2">Email</span>
+
+                            <input type="email" name="email" class="jmEmailInput">
+                        </div>
+                    </div>
+                    <div class="formRight ">
+                        <div class="jm-customInputV2" style="padding: 2px;">
+                            <select type="email" name="email" class="jmEmailInput">
+                                <option value="Select Subject" selected>Select Subject</option>
+                                <option value="Select Subject">Select Subject</option>
+                                <option value="Select Subject">Select Subject</option>
+                            </select>
+
+                        </div>
+                        <div class="jm-customInputV2" style="padding: 2px;">
+
+                            <select type="email" name="email" class="jmEmailInput">
+                                <option value="Select Products & Services">Select Products & Services</option>
+                                <option value="Select Products & Services">Select Products & Services</option>
+                                <option value="Select Products & Services">Select Products & Services</option>
+                            </select>
+                        </div>
+                        <div class="jm-customInputV2" style="margin-bottom: 24px; height: fit-content;">
+                            <textarea class="jmEmailInput" rows="3" style="height: 101px; resize: none;"
+                                placeholder="How can we help you?"></textarea>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+            </form>
+
+            <div class="recapcha-wraper">
+                <div class="g-recaptcha" data-sitekey="6Ld93aEpAAAAAFFXCOVrF_mznACU-VnxPpthpOa7"></div>
+            </div>
+            <div class="JM-SubmitBtn-wrape">
+                <a href="#" class="JM-SubmitBtn">Submit</a>
+            </div>
+
+        </div>
+
+        <script>
+            // Get all input, select, and textarea elements
+            var inputElements = document.querySelectorAll('input, select, textarea');
+
+            // Loop through each element and add event listeners for focus and blur events
+            inputElements.forEach(function (element) {
+                element.addEventListener('focus', function () {
+                    // Add the class 'focused' to the parent '.jm-customInputV2' element when the element is focused
+                    if (this.parentNode.classList.contains('jm-customInputV2')) {
+                        this.parentNode.classList.add('focused');
+                    }
+                    this.setAttribute('autocomplete', 'off');
+                });
+
+                element.addEventListener('blur', function () {
+                    // Remove the class 'focused' from the parent '.jm-customInputV2' element when the element loses focus
+                    if (this.parentNode.classList.contains('jm-customInputV2')) {
+                        this.parentNode.classList.remove('focused');
+                    }
+                });
+            });
+        </script>
+
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="wrapeFooter">
+                <div class="leftFooter">
+                    <div class="footerLogo">
+                        <img src="img/rafscore-logo.svg" alt="">
+                    </div>
+                    <div class="footerText1">
+                        <span>Copyright ©2024 <a class="webref sboldedTxt"
+                                href="https://www.rafscore.org./">www.rafscore.org.</a> All Right Reserved. </span>
+                    </div>
+                    <div class="footerText2">
+                        <span>Powered by <a class="webref sboldedTxt" href="https://www.npidataservices.com/">
+                                www.npidataservices.com</a></span>
+                    </div>
+
+                </div>
+                <div class="rightFooter">
+                    <span class="snt sboldedTxt">Stay in touch:</span>
+                    <div class="footer-social-icons">
+                        <a href="#"><img src="img/ig.svg" alt="ig"></a>
+                        <a href="#"><img src="img/yt.svg" alt="yt"></a>
+                        <a href="#"><img src="img/li.svg" alt="li"></a>
+                        <a href="#"><img src="img/fb.svg" alt="fb"></a>
+                        <a href="#"><img src="img/x.svg" alt="X"></a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

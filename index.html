@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="headerContent">
+                <div class="leftSideHeader">
+                    <div><img src="img/rafscore-logo.svg" alt=""></div>
+                </div>
+                <div class="rightSideHeader">
+                    <div><a href="contact.html" class="contactUsBtn">Contact us</a></div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <!-- Gbanners -->
+        <div class="container">
+            <div class="Ads-Banner">
+                <div class="leftBanner" style="position: relative;">
+                    <img src="img/raf-org-5-2-webp.webp" alt="Banner1">
+                    <div class="jm-txtOnBanner">
+                        <span class="GbannerH">Discover Real-Time RAF Scores Effortlessly</span><br>
+                        <span style="font-size: 14px; display: inline-block; margin-top: 10px;">Empower your systems
+                            with our RAF Score REST API for instant, <br>
+                            accurate RAF scoring.</span>
+                        <div style="margin-top: 25px;">
+                            <a href="#"
+                                style="padding: 10px; border: 1px solid; border-radius: 8px; font-size: 14px; text-decoration: none; color:  #111111; font-weight: 500;">Try
+                                this REST API Now</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="rightBanner" style="position: relative;">
+                    <img src="img/raf-org-6-2-webp.webp" alt="Banner2">
+                    <div style="position: absolute; bottom:-5px; left: 15px;">
+                        <span style="font-size: 20px;font-weight: 700;">Accelerate RAF <br>
+                            Scoring for Bulk Data</span><br>
+
+                        <div style="margin-top: 15px;">
+                            <a href="#"
+                                style="padding: 10px; border: 1px solid; border-radius: 8px; font-size: 14px; text-decoration: none; color:  #111111; font-weight: 500;">Try
+                                Now</a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- hcc score -->
+        <div class="container">
+            <div class="hccHeader" id="hrfHeader">
+                <h1>HCC RAF Score</h1>
+            </div>
+            <div class="hccScore">
+                <div class="lefthccBox">
+                    <div class="wrapelefthccBox">
+                        <form>
+                            <div class="div-input">
+                                <label for="riskModelInput"><span class="labelText">Risk Model</span></label>
+                                <select name="riskModelInput" id="riskModelInput">
+                                    <option value="CMS-HCC-V24 Continuing Enrollee" selected>CMS-HCC-V24 Continuing
+                                        Enrollee
+                                    </option>
+                                    <option value="CMS-HCC-V24 Continuing Enrollee">CMS-HCC-V24 Continuing Enrollee
+                                    </option>
+                                    <option value="CMS-HCC-V24 Continuing Enrollee">CMS-HCC-V24 Continuing Enrollee
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="div-input">
+                                <label for="riskFactorInput"><span class="labelText">Risk Factor</span></label>
+                                <select name="riskFactorInput" id="riskFactorInput">
+                                    <option value="CMS-HCC-V24 Continuing Enrollee" selected>CMS-HCC-V24 Continuing
+                                        Enrollee
+                                    </option>
+                                    <option value="CMS-HCC-V24 Continuing Enrollee">CMS-HCC-V24 Continuing Enrollee
+                                    </option>
+                                    <option value="CMS-HCC-V24 Continuing Enrollee">CMS-HCC-V24 Continuing Enrollee
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="div-input-duo">
+                                <div class="input1">
+                                    <label for="Gender"><span class="labelText">Gender</span></label>
+                                    <select name="Gender" id="Gender">
+                                        <option value="Male" selected>Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
+                                <div class="input2">
+                                    <label for="Age"><span class="labelText">Age</span></label>
+                                    <input type="number" name="Age" id="Age" min="15" max="150" value="64">
+                                </div>
+
+                            </div>
+                            <div class="warnMessage">
+                                <span class="labelText">Diagnosis codes </span>
+                                <div class="messagetext">
+                                    <div class="leftAreaMesssage">
+                                        <img src="img/info.svg" alt="info">
+                                    </div>
+                                    <div class="rightAreaMessage">
+                                        <span class="headingmessage">Sample Data</span>
+                                        <span class="sampleCode">
+                                            <span class="actualCode"> C9200,D66,G8250,G7001,E1152,E849,E1122,N185,E7
+                                                402,I5023 </span><span class="tryThis" onclick="populateInput()">Try
+                                                This!</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="div-input codeinputBox">
+                                <textarea type="text" name="codeinputBox" id="codeInputBox"
+                                    placeholder="Copy and Paste Diagnosis Codes with , in between"
+                                    onkeyup="inputChange(event)">C9200,D66,G8250,G7001,E1152,E849,E1122,N185,E7402,I5023</textarea>
+                            </div>
+                            <div class="submitBtn">
+                                <a>Submit</a>
+                            </div>
+
+
+                        </form>
+                    </div>
+
+                </div>
+                <div class="righthccBox">
+                    <div>
+                        <div class="wrapetheTable">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th style="width: 22%;">ICD 10 CM Code</th>
+                                        <th style="width: 15%;">HCC Value</th>
+                                        <th style="width: 50%;">Diagnosis Description</th>
+                                        <th style="width: 13%;">Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><img class="deleteIcon" src="img/delete-24px.svg" alt="del"
+                                                style="visibility: hidden;"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="hrsubmitBtn ">
+                            <a class="innSubmit disable-state">
+                                Submit
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </main>
+    <div class="container content">
+        <h2 class="contentHeading">Discover the RAF Score Tool to streamline post prospective chart reviews and enhance
+            clinical
+            document improvement (CDI) recommendations.</h2>
+        <p>
+            The RAF Score integrates demographic, diagnosis, and disease interaction risk scores to offer a holistic
+            patient
+            health status assessment with risk factor,
+            age, gender, and diagnosis codes. The demographic risk score encompasses critical factors such as age,
+            community, medical institution, and age-gender
+            interactions. Meanwhile, the diagnosis risk score is founded upon the Hierarchical Condition Category (HCC)
+            codes extracted from the patient's ICD-10
+            codes for diagnosis, reflecting chronic conditions. <br>
+            By meticulously analyzing these factors, it offers an accurate understanding of a patient's health
+            landscape.
+            The importance of the Risk Adjustment Factor
+            Score cannot be overstated as they directly impact budgeting and resource allocation for shared-risk
+            providers
+            and payers.
+            A low risk score, while potentially indicating a healthier population, can also highlight the significance
+            of
+            accurate and comprehensive documentation. On
+            the flip side, a high risk score signals patients with heightened health risks, necessitating a more
+            intricate
+            level of care and allocation of resources. An HCC
+            RAF score of 1.00 serves as a benchmark for average resource utilization, while an HCC risk score surpassing
+            1.00 signifies increased resource requirements.
+        </p>
+        <h3>Benefits of RAF</h3>
+        <ul>
+            <li>With the RAF Score Calculator, the healthcare providers and payers gain a precise tool to allocate
+                resources
+                effectively. In addition to it, the risk score
+                directly influences the average Medicare Advantage patient rate, ensuring that resource allocation
+                corresponds accurately to a patient's health status</li>
+            <li>
+                This tool is designed exclusively for medical coders and physicians. Its purpose is to streamline your
+                approach to post-prospective chart reviews and
+                clinical document improvement (CDI) recommendations
+            </li>
+            <li>
+                It greatly assists medical coders in calculating risk scores with revenue impact, making the analysis
+                process remarkably easy and quick
+            </li>
+            <li>
+                This innovative tool transforms healthcare from a generalized to a patient-centric, fine-tuned, and
+                results-oriented approach
+            </li>
+        </ul>
+        <h3>How To Use This Tool</h3>
+        <p>
+            There are three primary categories of risk models in this Calculator: CMS-HCC, RxHCC, and ESRD, each
+            featuring
+            distinct models for both continuing and
+            new enrollees. Upon selecting a risk model, you will find a list of corresponding risk factors available for
+            selection. Following this, you can choose the gender
+            and input an age up to 120.<br>
+            Subsequently, you can enter up to 20 diagnosis codes either by manual entry or by copying and pasting them
+            into
+            the provided text box, separating them
+            with commas.<br>
+            For record removal, the delete button is available at the end of each row. Upon inputting all necessary
+            data,
+            click the submit button to generate the
+            Revenue Impact Report.<br>
+            Our RAF Score Calculator performs distinct calculations for RISK scores and Medicare Advantage Payment
+            across
+            demographics, diagnoses, and disease
+            interactions. At the top of the Revenue Impact Report, you can find the button to download the report in PDF
+            format generated by our RAF Score Calculator.
+            At the top of the Revenue Analysis Report, you can find the button to download the report in PDF format
+            generated by our RAF Score Calculator.
+        </p>
+
+    </div>
+    <footer>
+        <div class="container">
+            <div class="wrapeFooter">
+                <div class="leftFooter">
+                    <div class="footerLogo">
+                        <img src="img/rafscore-logo.svg" alt="">
+                    </div>
+                    <div class="footerText1">
+                        <span>Copyright ©2024 <a class="webref sboldedTxt"
+                                href="https://www.rafscore.org./">www.rafscore.org.</a> All Right Reserved. </span>
+                    </div>
+                    <div class="footerText2">
+                        <span>Powered by <a class="webref sboldedTxt" href="https://www.npidataservices.com/">
+                                www.npidataservices.com</a></span>
+                    </div>
+
+                </div>
+                <div class="rightFooter">
+                    <span class="snt sboldedTxt">Stay in touch:</span>
+                    <div class="footer-social-icons">
+                        <a href="#"><img src="img/ig.svg" alt="ig"></a>
+                        <a href="#"><img src="img/yt.svg" alt="yt"></a>
+                        <a href="#"><img src="img/li.svg" alt="li"></a>
+                        <a href="#"><img src="img/fb.svg" alt="fb"></a>
+                        <a href="#"><img src="img/x.svg" alt="X"></a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
